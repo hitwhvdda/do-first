@@ -47,8 +47,8 @@
     <select id="list" resultType="Category">
         select * from category where status=1
         <if test="type!=null">
-            and type=#{type}>
+            and type=#{type}
         </if>
-        order by category.sort asc, create_Time desc
+        order by sort asc, create_time desc
     </select>
 </mapper>
