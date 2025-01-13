@@ -5,3 +5,4 @@
 *Test.java
 **/test/
 sky-common/src/main/java/com/sky/utils/TencentCOSUtil.java
+sky-server/src/main/resources/application-dev.yml
