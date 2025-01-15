@@ -33,4 +33,19 @@
         </where>
         order by order_time desc
     </select>
+    <select id="getOrderCount" resultType="Integer">
+        select count(id) from orders
+        <where>
+            <if test="status!=null">and status=${status}</if>
+            <if test="begin!=null"> and order_time &gt; #{begin}</if>
+            <if test="end!=null"> and order_time &lt; #{end}</if>
+        </where>
+    </select>
+    <select id="getGoodSale" resultType="com.sky.dto.GoodsSalesDTO">
+        select od.name,sum(od.number) number from order_detail od left outer join orders o on od.order_id = o.id
+        where order_time between #{beginTime} and #{endTime} and status = 5
+        group by od.name
+        order by number desc
+        limit 0,10
+    </select>
 </mapper>

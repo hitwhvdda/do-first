@@ -25,4 +25,6 @@ public class MessageConstant {
     public static final String ORDER_NOT_FOUND = "订单不存在";
 
     public static final String ALREADY_EXSIST = "用户已存在";
+
+    public static final String TIME_SCOPE_EXSIST = "时间范围错误";
 }

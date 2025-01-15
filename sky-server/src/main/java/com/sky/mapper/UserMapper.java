@@ -9,9 +9,12 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface UserMapper {
+
+    Integer getUserStatistic(Map map);
 
     /**
      * 根据openid查找用户

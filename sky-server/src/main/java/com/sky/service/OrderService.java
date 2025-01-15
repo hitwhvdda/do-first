@@ -53,4 +53,6 @@ public interface OrderService {
     void delivery(Long id);
 
     void finishOrder(Long id);
+
+    void reminder(Long id);
 }
